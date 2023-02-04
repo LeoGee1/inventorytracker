@@ -4,7 +4,7 @@ const heads = document.querySelectorAll('.heads');
 const tabbed = document.querySelectorAll('.tab');
 const list = document.querySelector('#homePage');
 const detailsList = document.querySelector('#detailsPage');
-const form = document.querySelector('.file-addition-page')
+const form = document.querySelector('.file-addition-page');
 
 // this is to swicth tabs uopn clicking action for the section
 tabs.addEventListener('click', (e) => {
