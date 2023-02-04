@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/41d4b3454d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="tracker.css">
+    <title>Tracker</title>
+</head>
+<body>
+  <main>
+    <header class="header">
+      <div class="headerOne">
+        <h2 class="inventory">Inventory</h2>
+        <div><a href="https://github.com/LeoGee1"><i class="fa-regular fa-user"></i></a></div>
+      </div>
+      
+      <form class="headerForm">
+        <div class="headerFirstChild heads active" id="headerFirstChild">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="headerInput" class="headerInput
+            " placeholder="Search by character">
+        </div>
+
+        <div class="headerSecondChild heads" id="headerSecondChild">
+          <i class="fa-solid fa-plus"></i>
+          <input type="text" id="headerInputTwo" class="headerInput" placeholder="add your products">
+         </div>
+
+        <div class="headerThirdChild heads" id="headerThirdChild">
+          <i class="fa-solid fa-magnifying-glass third"></i>
+          <input type="text" id="headerInputThree" class="headerInput third
+          "placeholder="Search by character">
+        </div>
+         <!-- </div> -->
+      </form>
+
+        <!-- tab section -->
+      <ul id="tabs-parent" class="tabs-parent">
+        <li class="tab active one" data-target="#homePage" data-head ="#headerFirstChild">
+          <i class="fa-solid fa-house" data-target="#homePage" data-head ="#headerFirstChild"></i>
+        </li>
+
+        <li class="tab" data-target="#filePage" data-head = "#headerSecondChild">
+          <i class="fa-solid fa-circle-plus fam" data-target="#filePage" data-head = "#headerSecondChild"></i>
+        </li>
+
+        <li class="tab" data-target="#detailsPage" data-head="#headerThirdChild">
+          <i class="fa-solid fa-chart-bar"  data-target="#detailsPage" data-head="#headerThirdChild"></i>
+        </li>
+      </ul>
+    </header>
+      <!-- main section -->
+    <div >
+      <section class="home-page section active" id="homePage">
+       <!-- <div class="items sample-one" id="0">
+          <div class="slash-parent"><i class="fa-solid fa-store-slash"></i>
+          </div>
+          <h2 class="stock">Out of Stock</h2>
+          <div class="items-menu">
+            <h3 class="items-name">Sample Product</h3>
+            <i class="fa-solid fa-circle-info" data-target=".details-page"></i>
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div>
+
+        <div class="items sample-two" id ="1">
+          <div  class="slash-parent"><i class="fa-solid fa-store-slash"></i>
+          </div>
+          <h2 class="stock">Out of Stock</h2>
+          <div class="items-menu">
+            <h3 class="items-name">Sample Pro-1</h3>
+            <i class="fa-solid fa-circle-info" data-target=".details-page"></i>
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+       </div>
+ 
+       <div class="items sample-three" id="2">
+          <div class="slash-parent"><i class="fa-solid fa-store-slash"></i>
+          </div>
+          <h2 class="stock">Out of Stock</h2>
+          <div class="items-menu">
+            <h3 class="items-name">Sample Pro-2</h3>
+            <i class="fa-solid fa-circle-info" data-target=".details-page"></i>
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+       </div>
+
+       <div class="items sample-four" id="3">
+          <div class="slash-parent"><i class="fa-solid fa-store-slash"></i>
+          </div>
+          <h2 class="stock">Out of Stock</h2>
+          <div class="items-menu">
+            <h3 class="items-name">Sample Pro-3</h3>
+            <i class="fa-solid fa-circle-info" data-target=".details-page"></i>
+            <i class="fa-solid fa-xmark"></i>
+          </div>
+        </div> -->
+      </section>
+
+      <!-- file addition section -->
+      <section class="file-page section" id="filePage">
+        <form class="file-addition-page">
+         <div class="name-parent">
+          <label for="productName" class="product-name-label">product Name</label>
+          <input type="text" id="productName" class="product-name" maxlength="15" required>
+         </div>
+
+          <div class="description-parent">
+            <label for="productDescription" class="label-description">product description</label>
+            <textarea id="productDescription" class="product-description" placeholder="write a detailed description" maxlength="160" required></textarea>
+          </div>
+
+          <div class="product-parent">
+            <label for="file" class="label-file" id="labelFile"><i class="fa-solid fa-plus"></i>
+              <input type="file" id="file" class="file" accept="image/jpg, image/png" name="image">
+            </label>
+          </div>
+          <button class="add-btn" id="addBtn">Add to Home</button>
+        </form>
+      </section>
+
+      <!-- file details section -->
+      <section class="details-page section" id ="detailsPage">
+        <!-- <div class="big-box">
+          <div class="left">
+            <div class="imagery"></div>
+            <h3 class="name">Sample One</h3>
+          </div>
+
+          <div class="right">
+            <div class="right-above">
+              <i class="fa-regular fa-square-check ex"></i>
+              <i class="fa-solid fa-ellipsis"></i>
+              <i class="fa-solid fa-minus fas"></i>
+              <i class="fa-solid fa-plus fap"></i>
+            </div>
+
+            <h3 class="description">This is a very high quality lotion that is mainly focused on softening and brightening the human skin, making sure there is no alteration in natural composure
+            </h3>
+
+            <div class="right-below">
+              <div class="quantity">Quantity</div>
+              <div class="counter">1</div>
+            </div>
+          </div>
+        </div> -->
+      </section>
+      <hr class="dash">
+      <footer class="footer">
+        <h3 class="stay-msg">Stay on track with your hands</h3>
+        <h4 class="create-msg">A creation of Leo</h4>
+      </footer>
+    </div>
+  </main>
+  <script src="tracker.js"></script>
+  <script src="trackerdot.js"></script>
+</body>
+</html>
