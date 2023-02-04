@@ -244,6 +244,7 @@ const plusItemsToPage = (x) => {
     let descriptionValue = document.querySelector('#productDescription').value.trim();
     let itemId =`sample-${nameValue}`.replaceAll(' ', '');
     let img = `${uploaded_image}`;
+    form.reset();
     if(nameValue.length === 0 || nameValue.length > 15 || descriptionValue.length === 0 || descriptionValue.length > 200 || displayImage.style.backgroundImage === ''){
         return;
      }
