@@ -4,7 +4,7 @@ const heads = document.querySelectorAll('.heads');
 const tabbed = document.querySelectorAll('.tab');
 const list = document.querySelector('#homePage');
 const detailsList = document.querySelector('#detailsPage');
-
+const form = document.querySelector('.file-addition-page')
 
 // this is to swicth tabs uopn clicking action for the section
 tabs.addEventListener('click', (e) => {
@@ -244,7 +244,7 @@ const plusItemsToPage = (x) => {
     let descriptionValue = document.querySelector('#productDescription').value.trim();
     let itemId =`sample-${nameValue}`.replaceAll(' ', '');
     let img = `${uploaded_image}`;
-
+    form.reset();
     if(nameValue.length === 0 || nameValue.length > 15 || descriptionValue.length === 0 || descriptionValue.length > 200 || displayImage.style.backgroundImage === ''){
         return;
      }
