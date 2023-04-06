@@ -4,7 +4,7 @@ const heads = document.querySelectorAll('.heads');
 const tabbed = document.querySelectorAll('.tab');
 const list = document.querySelector('#homePage');
 const detailsList = document.querySelector('#detailsPage');
-const form = document.querySelector('.file-addition-page');
+const form = document.querySelector('.file-addition-page')
 
 // this is to swicth tabs uopn clicking action for the section
 tabs.addEventListener('click', (e) => {
@@ -231,15 +231,14 @@ const sampleDetailsDisplay = () => {
 };
 
 sampleDetailsDisplay();
-
-const prevent =  (e) => {
+const prevent = (e) => {
     e.preventDefault()
-};
+}
+
 // this is to add product image, product name to the home page
 const addBtn = document.querySelector('#addBtn');
 
-const plusItemsToPage = (x) => {
-    let { id, name, desc, image } = x;
+const plusItemsToPage = () => {
     let nameValue = document.querySelector('#productName').value.trim();
     let descriptionValue = document.querySelector('#productDescription').value.trim();
     let itemId =`sample-${nameValue}`.replaceAll(' ', '');
@@ -305,8 +304,7 @@ const plusItemsToPage = (x) => {
 };
 
 let data = 0;
-const plusItemsToPageDetails = (prop) => {
-    let { id, name, desc, image, item} = prop;
+const plusItemsToPageDetails = () => {
     let nameValue = document.querySelector('#productName').value.trim();
     let counterId = nameValue.replaceAll(' ', '');
     let descriptionValue = document.querySelector('#productDescription').value.trim();
@@ -325,12 +323,10 @@ const plusItemsToPageDetails = (prop) => {
         return;
      } 
      let search = basket.find((x) => x.id == counterId);
-     console.log(search);
 
      if (search === undefined) {
         basket.push(newItems);
         localStorage.setItem('data', JSON.stringify(basket));
-
         return detailsList.innerHTML += ( 
             `
             <div class="big-box">
@@ -365,12 +361,10 @@ const plusItemsToPageDetails = (prop) => {
         };
 };
     
+const add = () => {
+    plusItemsToPageDetails();
+    plusItemsToPage();
+}
 
-addBtn.addEventListener('click', plusItemsToPage);
-addBtn.addEventListener('click', plusItemsToPageDetails);
+addBtn.addEventListener('click', add);
 addBtn.addEventListener('click', prevent);
-
-
-
-
-
